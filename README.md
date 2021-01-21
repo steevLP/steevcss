@@ -3,6 +3,7 @@ SteevCSS is like the name says a CSS Framework!
 This Framework is optimized and maintained for my usecases and my usecases only please keep that in mind when reporting anything..
 
 # what steevcss not is
+this librarie is not and wont ever be perfect for your use.. i excpect you to at leaste be able to override css on yourend when using my framework.
 It is not maintained by a big team like bootstrap is if you want a professional librarie you won't need to debug as much as mine. then dont use it
 
 # disclaymer
