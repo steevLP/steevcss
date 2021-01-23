@@ -1,18 +1,27 @@
-$primBG: rgb(245, 245, 245)
+$primBG: rgb(241, 241, 241)
 $columns: 12
+$navBG: #dfdfdf
+$navgap: 1em
 *
   box-sizing: border-box
-body 
+body   
   margin: 0
   padding: 0
   background: $primBG
   font-family: sans-serif
+// Dev Classes
 .dev
   border: 1px solid black
+.display 
+  background-color: lightcoral
+  border: 1px solid red
+  text-align: center
+// Container
 .container 
   width: calc( 100% - 10em )
   max-width: 60em
   margin: 0 auto
+// Grid
 div[class^="col-"]
   padding: 1rem 0
   text-align: center
@@ -24,3 +33,101 @@ div[class^="col-"]
     flex: 0 0 100% / $columns * $i
   .col-offset-#{$i}
     margin-left: 100% / $columns * $i
+// Navigation
+header
+  background: $navBG
+  text-align: center
+  position: fixed
+  z-index: 999
+  width: 100%
+.nav-toggle
+  display: none
+.nav-toggle-label
+  position: absolute
+  top: 0
+  left: 0
+  margin-left: 1em
+  height: 100%
+  display: flex
+  align-items: center
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after
+  display: block
+  background: white
+  height: 2px
+  width: 2em
+  border-radius: 2px
+.nav-toggle-label span::before,
+.nav-toggle-label span::after
+  content: ''
+  position: absolute
+.nav-toggle-label span::before
+  bottom: 30px
+.nav-toggle-label span::after
+  top: 30px
+nav
+  position: absolute
+  text-align: left
+  top: 100%
+  width: 100%
+  left: 0
+  background: $navBG
+  display: none
+  transform: scale(1, 0)
+  transform-origin: top
+  transition: transform 400ms ease-in-out
+nav ul
+  margin: 0
+  padding: 0
+  list-style-type: none
+nav li
+  margin-bottom: 1em
+  margin-left: 1em
+nav a 
+  text-decoration: none
+  font-size: 1.2rem
+  text-transform: uppercase
+  color: white
+  opacity: 0
+nav a:hover
+  color: #000
+.nav-toggle:checked ~ nav
+  display: block
+  transform: scale(1,1)
+.nav-toggle:checked ~ nav a
+  opacity: 1
+  transition: opacity 150ms ease-in-out
+@media screen and (min-width: 800px)
+  .nav-toggle-label
+    display: none
+  header
+    display: grid
+    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr
+  .nav-logo
+    grid-column: 2 / span 1
+  nav
+    all: unset
+    grid-column: 3 / 4
+    display: flex
+    align-items: center
+  nav a
+    opacity: 1
+  nav ul
+    display: flex
+  nav li
+    margin-left: $navgap
+    margin-bottom: 0
+    list-style: none
+  // Left sided Navbar for more custumisation
+  .nav-logo-left
+    grid-column: 2 / span 1
+  .nav-left
+    all: unset
+    grid-column: 3 / 4
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  .nav-left ul
+    display: flex
+    justify-content: flex-end
