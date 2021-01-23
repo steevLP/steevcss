@@ -13,7 +13,11 @@ body
 main
   z-index: 980
   position: relative
-  top: 6em
+  top: 5em
+// header classes margin fix
+@for $i from 1 through 12
+     h#{$i}
+       margin: 10px
 // Dev Classes
 .dev
   border: 1px solid black
@@ -38,8 +42,6 @@ div[class^="col-"]
     flex: 0 0 100% / $columns * $i
   .col-offset-#{$i}
     margin-left: 100% / $columns * $i
-// alert classes
-  
 // Navigation
 header
   background: $navBG

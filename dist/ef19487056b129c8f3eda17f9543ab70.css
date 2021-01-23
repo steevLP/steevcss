@@ -10,7 +10,43 @@ body {
 main {
   z-index: 980;
   position: relative;
-  top: 6em; }
+  top: 5em; }
+
+h1 {
+  margin: 10px; }
+
+h2 {
+  margin: 10px; }
+
+h3 {
+  margin: 10px; }
+
+h4 {
+  margin: 10px; }
+
+h5 {
+  margin: 10px; }
+
+h6 {
+  margin: 10px; }
+
+h7 {
+  margin: 10px; }
+
+h8 {
+  margin: 10px; }
+
+h9 {
+  margin: 10px; }
+
+h10 {
+  margin: 10px; }
+
+h11 {
+  margin: 10px; }
+
+h12 {
+  margin: 10px; }
 
 .dev {
   border: 1px solid black; }
