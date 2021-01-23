@@ -1,6 +1,5 @@
 # steevcss
 my own collection of html, css and javascript code combined to a webframework
-
 1. GridSystem 24 Elemente
 2. Code Preview
 3. SlideShow [Basicly implemented tweaks needed]
