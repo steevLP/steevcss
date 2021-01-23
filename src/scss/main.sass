@@ -1,0 +1,26 @@
+$primBG: rgb(245, 245, 245)
+$columns: 12
+*
+  box-sizing: border-box
+body 
+  margin: 0
+  padding: 0
+  background: $primBG
+  font-family: sans-serif
+.dev
+  border: 1px solid black
+.container 
+  width: calc( 100% - 10em )
+  max-width: 60em
+  margin: 0 auto
+div[class^="col-"]
+  padding: 1rem 0
+  text-align: center
+.row
+  display: flex
+  flex-wrap: wrap
+@for $i from 1 through $columns 
+  .col-#{$i}
+    flex: 0 0 100% / $columns * $i
+  .col-offset-#{$i}
+    margin-left: 100% / $columns * $i
