@@ -10,7 +10,7 @@ body {
 main {
   z-index: 980;
   position: relative;
-  top: 5em; }
+  top: 5.5em; }
 
 h1 {
   margin: 10px; }
@@ -149,7 +149,8 @@ header {
   z-index: 999;
   width: 100%;
   height: auto;
-  top: 0; }
+  top: 0;
+  padding: 10px; }
 
 .nav-toggle {
   display: none; }
