@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #f1f1f1;
+  background: #f8f8f8;
   font-family: sans-serif; }
 
 main {
@@ -58,8 +58,36 @@ h12 {
 
 .container {
   width: calc( 100% - 10em);
-  max-width: 60em;
+  max-width: 90em;
   margin: 0 auto; }
+
+.alert-primary {
+  border-radius: 2px;
+  background-color: #3498db;
+  border: 1px solid #2980b9;
+  padding: 1rem;
+  color: white; }
+
+.alert-danger {
+  border-radius: 2px;
+  background-color: #e74c3c;
+  border: 1px solid #c0392b;
+  padding: 1rem;
+  color: white; }
+
+.alert-warning {
+  border-radius: 2px;
+  background-color: #f1c40f;
+  border: 1px solid #f39c12;
+  padding: 1rem;
+  color: white; }
+
+.alert-success {
+  border-radius: 2px;
+  background-color: #2ecc71;
+  border: 1px solid #27ae60;
+  padding: 1rem;
+  color: white; }
 
 div[class^="col-"] {
   padding: 1rem 0;
@@ -142,7 +170,7 @@ div[class^="col-"] {
   margin-left: 100%; }
 
 header {
-  background: #dfdfdf;
+  background: #f1f1f1;
   text-align: center;
   position: fixed;
   height: 30px;
@@ -190,7 +218,7 @@ nav {
   top: 100%;
   width: 100%;
   left: 0;
-  background: #dfdfdf;
+  background: #f1f1f1;
   display: none;
   transform: scale(1, 0);
   transform-origin: top;
@@ -209,11 +237,11 @@ nav a {
   text-decoration: none;
   font-size: 1.2rem;
   text-transform: uppercase;
-  color: white;
+  color: #2e2e2e;
   opacity: 0; }
 
 nav a:hover {
-  color: #000; }
+  color: #a5a5a5; }
 
 .nav-toggle:checked ~ nav {
   display: block;
@@ -229,11 +257,8 @@ nav a:hover {
   header {
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr; }
-  .nav-logo {
-    grid-column: 2 / span 1; }
   nav {
     all: unset;
-    grid-column: 3 / 4;
     display: flex;
     align-items: center; }
   nav a {
