@@ -1,6 +1,8 @@
 # steevcss
 my own collection of html, css and javascript code combined to a webframework
-1. GridSystem 24 Elemente
+
+## Feature List
+1. GridSystem 12 Elemente [Implemented]
 2. Code Preview
 3. SlideShow
 4. Navigations [Implemented]
@@ -14,4 +16,11 @@ my own collection of html, css and javascript code combined to a webframework
 12. general styled images (rounded borders)
 13. Dropdowns
 14. colored sections (a full length area with defined background-color)
-15. Alert Sections (Sections colored as their meaning with text inside)
+15. Alert Sections [Implemented]
+
+## Stuff i already found
+1. responsiveness is a bit messy
+2. images in navbar are completely messed up
+3. the colors may need a tweak
+4. mobile toggle button needs to be bigger
+5. revert back to standard font collection with verdana in it
