@@ -18,32 +18,26 @@ body
   margin: 0
   padding: 0
   background: $primBG
-  font-family: sans-serif
-// Nav Overlapping fix
+  font-family: sans-serifs
 main
   z-index: 980
   position: relative
   top: 5.5em
   width: 100%
   word-break: break-all
-
-// header classes margin fix
 @for $i from 1 through 12
      h#{$i}
        margin: 0
-// Dev Classes
 .dev
   border: 1px solid black
 .display 
   background-color: lightcoral
   border: 1px solid red
   text-align: center
-// Container
 .container 
   width: calc( 100% - 10em )
   max-width: 90em
   margin: 0 auto
-// Alert
 .alert-primary
   border-radius: 2px
   background-color: $primary
@@ -71,9 +65,11 @@ main
 .notification-primary
   width: 100%;
   display: flex
+  padding: 5px
+  border: 2px solid $primary
+  border-radius: 2px
 .notification-primary h2
   border-right: 0.3rem solid $primary
-  border-radius: 2px
   padding: 5px
   margin-right: 5px;
   min-width: 70px
@@ -82,9 +78,11 @@ main
 .notification-danger
   width: 100%;
   display: flex
+  padding: 5px
+  border: 2px solid $danger
+  border-radius: 2px
 .notification-danger h2
   border-right: 0.3rem solid $danger
-  border-radius: 2px
   padding: 5px
   margin-right: 5px;
   min-width: 70px
@@ -93,9 +91,11 @@ main
 .notification-warning
   width: 100%;
   display: flex
+  padding: 5px
+  border: 2px solid $warning
+  border-radius: 2px
 .notification-warning h2
   border-right: 0.3rem solid $warning
-  border-radius: 2px
   padding: 5px
   margin-right: 5px;
   min-width: 70px
@@ -104,9 +104,11 @@ main
 .notification-success
   width: 100%;
   display: flex
+  padding: 5px
+  border: 2px solid $success
+  border-radius: 2px
 .notification-success h2
   border-right: 0.3rem solid $success
-  border-radius: 2px
   padding: 5px
   margin-right: 5px;
   min-width: 70px
@@ -116,7 +118,6 @@ main
   line-height: 30pt
   font-size: 15pt
   word-wrap: break-word
-// Grid
 div[class^="col-"]
   padding: 1rem 0
 .row
@@ -127,7 +128,6 @@ div[class^="col-"]
     flex: 0 0 100% / $columns * $i
   .col-offset-#{$i}
     margin-left: 100% / $columns * $i
-// Navigation
 header
   background: $navBG
   text-align: center
@@ -214,7 +214,6 @@ nav a:hover
     margin-left: $navgap
     margin-bottom: 0
     list-style: none
-  // Left sided Navbar for more custumisation
   .nav-logo-left
     grid-column: 2 / span 1
   .nav-left
