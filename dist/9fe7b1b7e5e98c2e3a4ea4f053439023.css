@@ -2,7 +2,10 @@
   box-sizing: border-box; }
 
 pre {
-  border: 1px solid black; }
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  font-size: 12pt; }
 
 body {
   margin: 0;
