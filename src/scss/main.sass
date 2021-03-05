@@ -12,27 +12,34 @@ $warning: #f1c40f
 $warning_dark: #f39c12
 $success: #2ecc71
 $success_dark: #27ae60
+
 *
   box-sizing: border-box
-pre
-  border: 1px solid black
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+hr
+  background-color: #c0c0c0
+  border: 2px solid #c0c0c0
   border-radius: 5px
-  background-color: $navBG
-  font-size: 12pt
 body   
   margin: 0
   padding: 0
   background: $primBG
-  font-family: sans-serifs
 main
   z-index: 980
   position: relative
   top: 5.5em
   width: 100%
   word-break: break-all
+pre
+  background-color: #d8d8d8
+  border-radius: 5px
 @for $i from 1 through 12
     h#{$i}
       margin: 0
+.embed 
+  background-color: #d8d8d8
+  border-radius: 5px
+  padding: 5px
 .dev
   border: 1px solid black
 .display 
