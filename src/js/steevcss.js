@@ -1,5 +1,6 @@
 var code = document.querySelectorAll("code");
 
+// code embed
 code.forEach(c => {
     let code = c.innerHTML.toString();
     var output = "";
@@ -13,4 +14,12 @@ code.forEach(c => {
         }
     }
     c.innerHTML = output;
-})
+});
+
+// TODO JavaScript Input value return
+// Current way.. 
+// -------------------------------------
+// get input by getting the input object
+// catch oninput event inside a function
+// Handle it inside the function
+// -------------------------------------
