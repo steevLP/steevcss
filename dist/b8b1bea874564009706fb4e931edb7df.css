@@ -1,0 +1,121 @@
+header {
+  background: #f1f1f1;
+  text-align: center;
+  position: fixed;
+  height: 30px;
+  z-index: 999;
+  width: 100%;
+  height: auto;
+  top: 0;
+  padding: 10px; }
+
+.nav-toggle {
+  display: none; }
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center; }
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px; }
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute; }
+
+.nav-toggle-label span::before {
+  bottom: 30px; }
+
+.nav-toggle-label span::after {
+  top: 30px; }
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  background: #f1f1f1;
+  display: none;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: 400ms;
+  transition: transform 400ms ease-in-out; }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em; }
+
+nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #2e2e2e;
+  opacity: 0; }
+
+nav a:hover {
+  color: #a5a5a5; }
+
+.nav-toggle:checked ~ nav {
+  display: block;
+  transform: scale(1, 1);
+  transition: 400ms; }
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 150ms ease-in-out; }
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none; } }
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr; }
+
+nav {
+  all: unset;
+  display: flex;
+  align-items: center; }
+
+nav a {
+  opacity: 1; }
+
+nav ul {
+  display: flex; }
+
+nav li {
+  margin-left: 1em;
+  margin-bottom: 0;
+  list-style: none; }
+
+.nav-logo-left {
+  grid-column: 2 / span 1; }
+
+.nav-left {
+  all: unset;
+  grid-column: 3 / 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+
+.nav-left ul {
+  display: flex;
+  justify-content: flex-end; }
