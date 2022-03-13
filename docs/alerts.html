@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://steevlp.github.io/steevcss/dist/steevcss.bundled.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+        <style>
+            .sidebar-wrapper {
+                display: flex;
+            }
+            .sidebar-style {
+                border-right: 1px solid rgba(0, 0, 0, 0.493) ;
+            }
+            .sidebar-left { 
+                padding: 0;
+                margin: 0;
+                margin-left: 0;
+                padding-right: 5px;
+                height: 100%;
+            }
+            .sidebar-menu {
+                width: fit-content;
+            }
+            .sidebar-item {
+                list-style: none;
+                min-width: min-content;
+            }
+            .sidebar-link {
+                width: fit-content;
+                color: #2980b9;
+                text-decoration: none;
+                font-size: 12pt;
+            }
+            .sidebar-content {
+                width: 100%;
+            }
+            .sidebar-title {
+                width: max-content;
+                font-size: 20pt;
+                padding-right: 5px;
+            }
+            .link {
+                color: #2980b9;
+                text-decoration: none;
+                font-size: 12pt;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="nav-logo">SteevCSS</h1>
+            <input id="nav-toggle" type="checkbox" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/docs/index.html">DOCS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div style="padding-left: 20px; padding-right: 20px;">
+                <div class="sidebar-wrapper">
+                    <div class="sidebar-left sidebar-style">
+                        <h1 class="sidebar-title">Dcoumentation:</h1>
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-item">
+                                <a href="/docs/index.html" class="sidebar-link">Home</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/docs/nav.html" class="sidebar-link">Navigations</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/docs/alerts.html" class="sidebar-link">Alerts & Notification</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/docs/slider.html" class="sidebar-link">Sliders</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/docs/toggle.html" class="sidebar-link">Toggles</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-content">
+                        <div class="container">
+                            <h1>Alerts</h1><br>
+                            You are seeing the Alert Documentation<br>
+                            as explanation there are two types of elements that some might think both are alerts<br>
+                            one is the full body coloured alert documented here and the other is basicly the same but only with coloured borders.<br>
+                            <br>
+                            there are multimple types of alerts<br>
+                            <br>
+                            <div class="alert-primary"> Primary </div><br>
+                            <div class="alert-danger"> Danger </div><br>
+                            <div class="alert-warning"> Warning </div><br>
+                            <div class="alert-success"> Success </div>
+                            <pre>
+                                <code class="language-html">
+<div class="alert-primary"> Primary </div>
+<div class="alert-danger"> Danger </div>
+<div class="alert-warning"> Warning </div>
+<div class="alert-success"> Success </div>
+                                </code>
+                            </pre>
+                            <h1 style="text-align: center;">Notification Elements</h1>
+                            As explained Notifications have a slight difference in their setup<br>
+                            the biggest difference is how they look and that they have a title and a message<br>
+                            <br>
+                            <div class="notification-primary"> 
+                                <h2>Primary Title</h2>
+                                <span class="notification-body">Primary Message</span>
+                            </div>
+                            <br>
+                            <div class="notification-danger"> 
+                                <h2>Danger Title</h2>
+                                <span class="notification-body">Danger Message</span>
+                            </div>
+                            <br>
+                            <div class="notification-warning"> 
+                                <h2>Warning Title</h2>
+                                <span class="notification-body">Warning Message</span>
+                            </div>
+                            <br>
+                            <div class="notification-success"> 
+                                <h2>Success Title</h2>
+                                <span class="notification-body">Success Message</span>
+                            </div>
+                            <pre>
+                                <code class="language-html">
+<div class="notification-primary"> 
+    <h2>Primary Title</h2>
+    <span class="notification-body">Primary Message</span>
+</div>
+<div class="notification-danger"> 
+    <h2>Danger Title</h2>
+    <span class="notification-body">Danger Message</span>
+</div>
+<div class="notification-warning"> 
+    <h2>Warning Title</h2>
+    <span class="notification-body">Warning Message</span>
+</div>
+<div class="notification-success"> 
+    <h2>Success Title</h2>
+    <span class="notification-body">Success Message</span>
+</div>
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </main>
+        <script src="https://steevlp.github.io/steevcss/dist/steevcss.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+    </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://steevlp.github.io/steevcss/dist/steevcss.bundled.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+        <style>
+            .sidebar-wrapper {
+                display: flex;
+            }
+            .sidebar-style {
+                border-right: 1px solid rgba(0, 0, 0, 0.493) ;
+            }
+            .sidebar-left { 
+                padding: 0;
+                margin: 0;
+                margin-left: 0;
+                padding-right: 5px;
+                height: 100%;
+            }
+            .sidebar-menu {
+                width: fit-content;
+            }
+            .sidebar-item {
+                list-style: none;
+                min-width: min-content;
+            }
+            .sidebar-link {
+                width: fit-content;
+                color: #2980b9;
+                text-decoration: none;
+                font-size: 12pt;
+            }
+            .sidebar-content {
+                width: 100%;
+            }
+            .sidebar-title {
+                width: max-content;
+                font-size: 20pt;
+                padding-right: 5px;
+            }
+            .link {
+                color: #2980b9;
+                text-decoration: none;
+                font-size: 12pt;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="nav-logo">SteevCSS</h1>
+            <input id="nav-toggle" type="checkbox" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/docs/index.html">DOCS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div style="padding-left: 20px; padding-right: 20px;">
+                <div class="sidebar-wrapper">
+                    <div class="sidebar-left sidebar-style">
+                        <h1 class="sidebar-title">Dcoumentation:</h1>
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-item">
+                                <a href="/docs/index.html" class="sidebar-link">Home</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/docs/nav.html" class="sidebar-link">Navigations</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/docs/alerts.html" class="sidebar-link">Alerts & Notification</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/docs/slider.html" class="sidebar-link">Sliders</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/docs/toggle.html" class="sidebar-link">Toggles</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-content">
+                        <div class="container">
+                            <h1>Toggles</h1>
+                            Here you can see the implemented versions of toggle switches<br>
+                            for now, only two version have been implemented and on this site more toggle options will be added later
+                            <br>
+                            <br>
+                            <h1>Current versions of switches</h1>
+                            These two elements are the currently only implemented switch elements inside the library<br>
+                            <!-- Rectangular switch -->
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <!-- Rounded switch -->
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>  
+                            <pre>
+                                <code class="language-html">
+<!-- Rectangular switch -->
+<label class="switch">
+    <input type="checkbox">
+    <span class="slider"></span>
+</label>
+<!-- Rounded switch -->
+<label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+</label>  
+                                </code>
+                            </pre>
+                            more is planed to this kind of input methods currently planed is to rename toggles to input groups and expand on the entire ecosystem it is recommended to stay tuned
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </main>
+        <script src="https://steevlp.github.io/steevcss/dist/steevcss.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+    </body>
+</html>

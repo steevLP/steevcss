@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://steevlp.github.io/steevcss/dist/steevcss.bundled.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+        <style>
+            .sidebar-wrapper {
+                display: flex;
+            }
+            .sidebar-style {
+                border-right: 1px solid rgba(0, 0, 0, 0.493) ;
+            }
+            .sidebar-left { 
+                padding: 0;
+                margin: 0;
+                margin-left: 0;
+                padding-right: 5px;
+                height: 100%;
+            }
+            .sidebar-menu {
+                width: fit-content;
+            }
+            .sidebar-item {
+                list-style: none;
+                min-width: min-content;
+            }
+            .sidebar-link {
+                width: fit-content;
+                color: #2980b9;
+                text-decoration: none;
+                font-size: 12pt;
+            }
+            .sidebar-content {
+                width: 100%;
+            }
+            .sidebar-title {
+                width: max-content;
+                font-size: 20pt;
+                padding-right: 5px;
+            }
+            .link {
+                color: #2980b9;
+                text-decoration: none;
+                font-size: 12pt;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="nav-logo">SteevCSS</h1>
+            <input id="nav-toggle" type="checkbox" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/docs/index.html">DOCS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div style="padding-left: 20px; padding-right: 20px;">
+                <div class="sidebar-wrapper">
+                    <div class="sidebar-left sidebar-style">
+                        <h1 class="sidebar-title">Dcoumentation:</h1>
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-item">
+                                <a href="/docs/index.html" class="sidebar-link">Home</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/docs/nav.html" class="sidebar-link">Navigations</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/docs/alerts.html" class="sidebar-link">Alerts & Notification</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/docs/slider.html" class="sidebar-link">Sliders</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/docs/toggle.html" class="sidebar-link">Toggles</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-content">
+                        <div class="container">
+                            <h1>Slider</h1>
+                            here you find the implementation of sliders keep in mind this library is in its very early stages and more will come as we go
+                            <br><br>
+                            <input type="range" min="1" max="100" value="0" class="range-slider-rounded" id="slider">
+                            <span>Span Value: </span><span id="output">0</span>
+                            <script>
+                                var slider = document.getElementById("slider");
+                                var output = document.getElementById("output");
+                                output.innerHTML = slider.value; // Display the default slider value
+            
+                                // Update the current slider value (each time you drag the slider handle)
+                                slider.oninput = function() {
+                                    output.innerHTML = this.value;
+                                }
+                            </script>
+                            <br><br>
+                            this example both show how to setup the slider and how to read its values into a label
+                            <pre>
+                                <code class="language-html">
+<input type="range" min="1" max="100" value="0" class="range-slider-rounded" id="slider">
+<span>Span Value: </span><span id="output">0</span>
+<script>
+    var slider = document.getElementById("slider");
+    var output = document.getElementById("output");
+    output.innerHTML = slider.value; // Display the default slider value
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+</script>
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </main>
+        <script src="https://steevlp.github.io/steevcss/dist/steevcss.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+    </body>
+</html>
