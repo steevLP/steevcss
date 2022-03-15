@@ -68,70 +68,33 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({14:[function(require,module,exports) {
-var bundleURL = null;
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+})({13:[function(require,module,exports) {
+var code = document.querySelectorAll("code");
 
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error;
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
-    if (matches) {
-      return getBaseURL(matches[0]);
+// code embed
+code.forEach(c => {
+    let code = c.innerHTML.toString();
+    var output = "";
+    for(let i = 0; i < code.length; i++){
+        switch(code.charAt(i)){
+            default: output += code.charAt(i); break;
+            case ">": output += "&gt;"; break;
+            case "<": output += "&lt;"; break;
+            case "&": output += "&amp;"; break;
+            case "\"": output += "&quot;"; break;
+        }
     }
-  }
+    c.innerHTML = output;
+});
 
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-
-},{}],13:[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-  newLink.onload = function () {
-    link.remove();
-  };
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-
-},{"./bundle-url":14}],0:[function(require,module,exports) {
+// TODO JavaScript Input value return
+// Current way.. 
+// -------------------------------------
+// get input by getting the input object
+// catch oninput event inside a function
+// Handle it inside the function
+// -------------------------------------
+},{}],0:[function(require,module,exports) {
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
 function Module() {
@@ -149,7 +112,7 @@ function Module() {
 module.bundle.Module = Module;
 
 if (!module.bundle.parent && typeof WebSocket !== 'undefined') {
-  var ws = new WebSocket('ws://localhost:61816/');
+  var ws = new WebSocket('ws://localhost:55587/');
   ws.onmessage = function(event) {
     var data = JSON.parse(event.data);
 
@@ -250,4 +213,4 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id)
   });
 }
-},{}]},{},[0])
+},{}]},{},[0,13])
