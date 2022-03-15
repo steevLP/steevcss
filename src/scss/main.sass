@@ -28,7 +28,6 @@ main
   word-break: break-word
 pre
   /*background-color: #d8d8d8*/
-  border: 1px solid #d8d8d8
   border-radius: 5px
 @for $i from 1 through 12
     h#{$i}
@@ -43,8 +42,10 @@ pre
   width: calc( 100% - 10em )
   max-width: 90em
   margin: 0 auto
-  /* Alert Embeds */
-
+.link
+    color: #2980b9
+    text-decoration: none
+    font-size: 12pt
 div[class^="col-"]
   padding: 1rem 0
 .row
@@ -55,4 +56,3 @@ div[class^="col-"]
     flex: 0 0 100% / $columns * $i
   .col-offset-#{$i}
     margin-left: 100% / $columns * $i
-

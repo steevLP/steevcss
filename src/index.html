@@ -8,10 +8,11 @@
         <link rel="stylesheet" href="scss/navbar.sass">
         <link rel="stylesheet" href="scss/messaging.sass">
         <link rel="stylesheet" href="scss/selector.sass">
+        <link rel="stylesheet" href="scss/button.sass">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
     </head>
     <body>
-        <header>
+        <header class="locked-top">
             <h1 class="nav-logo">Logo</h1>
             <input id="nav-toggle" type="checkbox" class="nav-toggle">
             <label for="nav-toggle" class="nav-toggle-label">
@@ -29,6 +30,11 @@
         </header>
         <main>
             <div class="container">
+                <button class="btn ">button</button>
+                <button class="btn btn-primary">button</button>
+                <button class="btn btn-danger">button</button>
+                <button class="btn btn-warning">button</button>
+                <button class="btn btn-success">button</button>
                 <h1>Toggle Slide</h1>
                 <br>
                 <!-- Rectangular switch -->
@@ -66,10 +72,47 @@
                 <h1>Code Embed</h1>
                 <pre>
                     <code class="language-html">
-    <h1>test</h1>
-    code here, escape it yourself.
-    <h2>test</h2>
-    
+<h1>test</h1>
+code here, escape it yourself.
+<h2>test</h2>
+<link rel="stylesheet" href="https://steevlp.github.io/steevcss/dist/steevcss.bundled.min.css">
+
+                    </code>
+                </pre>
+                <header>
+                    <h1 class="nav-logo">Logo</h1>
+                    <input id="nav-toggle" type="checkbox" class="nav-toggle">
+                    <label for="nav-toggle" class="nav-toggle-label">
+                        <span></span>
+                    </label>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Test</a></li>
+                            <li><a href="#">Test</a></li>
+                            <li><a href="#">Test</a></li>
+                            <li><a href="#">Test</a></li>
+                            <li><a href="#">Test</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <pre>
+                    <code class="language-html">
+<header>
+    <h1 class="nav-logo">Logo</h1>
+    <input id="nav-toggle" type="checkbox" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+    </label>
+    <nav>
+        <ul>
+            <li><a href="#">Test</a></li>
+            <li><a href="#">Test</a></li>
+            <li><a href="#">Test</a></li>
+            <li><a href="#">Test</a></li>
+            <li><a href="#">Test</a></li>
+        </ul>
+    </nav>
+</header>
                     </code>
                 </pre>
                 <h1 style="text-align: center;">Alert Elements</h1>

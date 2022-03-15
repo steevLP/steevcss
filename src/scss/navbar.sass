@@ -6,13 +6,14 @@ $navhovcolor: #a5a5a5
 header
     background: $navBG
     text-align: center
-    position: fixed
     height: 30px
     z-index: 999
     width: 100%
     height: auto
-    top: 0
     padding: 10px
+.locked-top
+    top: 0
+    position: fixed
 .nav-toggle
     display: none
 .nav-toggle-label
@@ -39,12 +40,13 @@ header
     bottom: 30px
 .nav-toggle-label span::after
     top: 30px
-nav
-    position: absolute
-    text-align: left
+.nav-locked
     top: 100%
-    width: 100%
     left: 0
+    position: absolute
+nav
+    text-align: left
+    width: 100%
     background: $navBG
     display: none
     transform: scale(1, 0)
@@ -102,3 +104,24 @@ nav li
 .nav-left ul
     display: flex
     justify-content: flex-end
+.sidebar-wrapper 
+    display: flex;
+.sidebar-wrapper .sidebar-content
+    width: 100%
+.sidebar-wrapper .sidebar-left
+    padding: 0
+    margin: 0
+    margin-left: 0
+    padding-right: 5px
+    height: 100%
+.sidebar-wrapper .sidebar-left .sidebar-menu ul
+    width: fit-content
+.sidebar-wrapper .sidebar-left .sidebar-menu .sidebar-title
+    width: max-content
+    font-size: 20pt
+    padding-right: 5px
+.sidebar-wrapper .sidebar-left .sidebar-menu .sidebar-item li
+    width: fit-content
+    color: #2980b9
+    text-decoration: none
+    font-size: 12pt
