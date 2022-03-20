@@ -5,7 +5,7 @@ my own collection of html, css and javascript code combined to a webframework
 You can find the Documentation [Here](https://steevlp.github.io/steevcss/)
 
 ## Todo
-1. GridSystem w 12 Elements [Implemented]
+1. GridSystem with 12 Elements [Implemented]
 2. Code Preview
 3. SlideShow
 4. Navigations [Implemented]
