@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>steevcss</title>
+        <link rel="stylesheet" href="https://steevlp.github.io/steevcss/dist/steevcss.bundled.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+    </head>
+    <body>
+        <header>
+            <h1 class="nav-logo">SteevCSS</h1>
+            <input id="nav-toggle" type="checkbox" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="/steevcss/">Home</a></li>
+                    <li><a href="/steevcss/docs/index.html">DOCS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <style>
+            .sidebar-wrapper {
+                display: flex;
+            }
+            .sidebar-style {
+                border-right: 1px solid rgba(0, 0, 0, 0.493) ;
+            }
+            .sidebar-left { 
+                padding: 0;
+                margin: 0;
+                margin-left: 0;
+                padding-right: 5px;
+                height: 100%;
+            }
+            .sidebar-menu {
+                width: fit-content;
+            }
+            .sidebar-item {
+                list-style: none;
+                min-width: min-content;
+            }
+            .sidebar-link {
+                width: fit-content;
+                color: #2980b9;
+                text-decoration: none;
+                font-size: 12pt;
+            }
+            .sidebar-content {
+                width: 100%;
+            }
+            .sidebar-title {
+                width: max-content;
+                font-size: 20pt;
+                padding-right: 5px;
+            }
+            .link {
+                color: #2980b9;
+                text-decoration: none;
+                font-size: 12pt;
+            }
+        </style>
+        <main>
+            <div style="padding-left: 20px; padding-right: 20px;">
+                <div class="sidebar-wrapper">
+                    <div class="sidebar-left sidebar-style">
+                        <h1 class="sidebar-title">Dcoumentation:</h1>
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-item">
+                                <a href="/steevcss/docs/index.html" class="sidebar-link">Home</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/steevcss/docs/nav.html" class="sidebar-link">Navigations</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/steevcss/docs/alerts.html" class="sidebar-link">Alerts & Notification</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/steevcss/docs/slider.html" class="sidebar-link">Sliders</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/steevcss/docs/toggle.html" class="sidebar-link">Toggles</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="/steevcss/docs/button.html" class="sidebar-link">Buttons</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-content">
+                        <div class="container">
+                            <h1>Introduction</h1>
+                            This Guide helps you to get started.<br>
+                            You Also will find the Documentation for SteevCSS here.<br>
+                            Because this is the first Documentation I maintain for a framework, feedback for improvement is more than welcome.<br>
+                            You can provide feedback on the repositories <a class="link" href="https://github.com/steevLP/steevcss/issues">issue tracker</a><br>
+                            <br>
+                            To get started, You can either use the GitHub <a class="link" href="https://github.com/steevLP/steevcss/releases">releases</a> or use the hosted version by using copying this:
+                            <pre>
+                                <code class="language-html">
+<link rel="stylesheet" href="https://steevlp.github.io/steevcss/dist/steevcss.bundled.min.css">
+<!-- <script src="https://steevlp.github.io/steevcss/dist/steevcss.js"></script> -->
+                                </code>
+                            </pre>
+                            Due to an issue that only should appear when displaying code, the script tag for the optional Javascript file is commented out. If using it, don't add it as a comment.
+                            <br><br>
+                            <h1>Embeds</h1>
+                            Embeds are styled containers, they can be used to make the content look special or section off to kinds of designs.<br>
+                            <div class="embed">
+                                <h3>Use Embeds to section off content from the rest of your website.</h3>
+                                <hr>
+                                <p>Or make messages look more special through them.</p>
+                            </div>
+                            You can see how this example was created below.
+                            <pre>
+                                <code class="language-html">
+<div class="embed">
+    <h3>Use Embeds to section off content from the rest of your website.</h3>
+    <hr>
+    <p>Or make messages look more special through them.</p>
+</div>
+                                </code>
+                            </pre>
+                            <h1>General Structure classes</h1>
+                            There are multiple classes you can use to bring structure into your website. <br>
+                            The First is the container class, which centers content and adds spacing to both sides.<br>
+                            A nice side effect is that this class also can, to some degree, handle changing screen sizes.
+                            <br><br>
+                            <div class="container" style="border: 1px solid black; border-radius: 5px; padding: 10px;">
+                                <h4>Inside a Container</h4></div>
+                            <br>
+                            You can see how this example was created below.
+                            <pre>
+                                <code class="language-html">
+<div class="container" style="border: 1px solid black; border-radius: 5px; padding: 10px;">
+    <h4>inside the container</h4>
+</div>
+                                </code>
+                            </pre>
+                            Another way is the Grid System you can see an example below.<br>
+                            <br>
+                            <div class="row">
+                                <div class="col-12 display"><h4>12</h4></div>
+                                <div class="col-11 display"><h4>11</h4></div>
+                                <div class="col-1 display"><h4>1</h4></div>
+                                <div class="col-10 display"><h4>10</h4></div>
+                                <div class="col-2 display"><h4>2</h4></div>
+                                <div class="col-9 display"><h4>9</h4></div>
+                                <div class="col-3 display"><h4>3</h4></div>
+                                <div class="col-8 display"><h4>8</h4></div>
+                                <div class="col-4 display"><h4>4</h4></div>
+                                <div class="col-7 display"><h4>7</h4></div>
+                                <div class="col-5 display"><h4>5</h4></div>
+                                <div class="col-6 display"><h4>6</h4></div>
+                                <div class="col-6 display"><h4>6</h4></div>
+                            </div>
+                            You can see how this example was created below.
+                            <pre>
+                                <code class="language-html">
+<div class="row">
+    <div class="col-12"><h4>12</h4></div>
+    <div class="col-11"><h4>11</h4></div>
+    <div class="col-1"><h4>1</h4></div>
+    <div class="col-10"><h4>10</h4></div>
+    <div class="col-2"><h4>2</h4></div>
+    <div class="col-9"><h4>9</h4></div>
+    <div class="col-3"><h4>3</h4></div>
+    <div class="col-8"><h4>8</h4></div>
+    <div class="col-4"><h4>4</h4></div>
+    <div class="col-7"><h4>7</h4></div>
+    <div class="col-5"><h4>5</h4></div>
+    <div class="col-6"><h4>6</h4></div>
+    <div class="col-6"><h4>6</h4></div>
+</div>
+                                </code>
+                            </pre>
+                            <br>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="https://steevlp.github.io/steevcss/dist/steevcss.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+    </body>
+</html>
