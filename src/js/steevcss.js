@@ -1,6 +1,8 @@
 var code = document.querySelectorAll("code");
 
-// code embed
+// TODO: Split a html tag by character 
+// current way taking 1:1 html and changing how it is setup
+// problem: this endsup in breaking once the file itself should be inside the display area
 code.forEach(c => {
     let code = c.innerHTML.toString();
     var output = "";
